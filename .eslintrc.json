@@ -1,7 +1,15 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"],
-  "rules": {
-             
-   "@typescript-eslint/no-explicit-any": ["off"]
-}
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["src/some-file.ts", "src/some-directory/**/*"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ]
 }
